@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AIntel — AI Automation That Pays For Itself</title>
+  <title>AIntel — AI Automation for Businesses That Mean Business</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
@@ -19,6 +19,7 @@
       --muted:    #6B7FAD;
       --border:   rgba(201,168,76,0.22);
       --border-s: rgba(255,255,255,0.06);
+      --green:    #22c55e;
       --r:        14px;
       --rs:       8px;
       --shadow-gold: 0 0 30px rgba(201,168,76,0.15);
@@ -44,18 +45,20 @@
       border-bottom: 1px solid var(--border-s);
     }
     .logo {
-      font-weight: 900; font-size: 19px; letter-spacing: -0.5px;
-      text-decoration: none; color: var(--text);
-      display: flex; align-items: center; gap: 7px;
+      font-weight: 900; font-size: 22px; letter-spacing: -0.5px;
+      text-decoration: none;
+      display: flex; align-items: center; gap: 9px;
     }
     .logo-mark {
-      width: 28px; height: 28px; border-radius: 7px;
+      width: 30px; height: 30px; border-radius: 8px;
       background: linear-gradient(135deg, var(--gold), var(--gold2));
       display: flex; align-items: center; justify-content: center;
       font-size: 13px; font-weight: 900; color: #060C1C;
+      box-shadow: 0 0 14px rgba(201,168,76,0.4);
     }
-    .logo-text { color: var(--text); }
-    .logo-text span { color: var(--gold); }
+    /* AI = white, ntel = gold */
+    .logo-text { color: #fff; }
+    .logo-text .gold { color: var(--gold); }
     .nav-cta {
       padding: 9px 18px; border-radius: var(--rs);
       background: var(--gold); color: #060C1C;
@@ -69,14 +72,14 @@
     .hero {
       min-height: 100vh;
       display: flex; flex-direction: column; justify-content: center;
-      padding: 120px 24px 80px;
+      padding: 120px 24px 70px;
       position: relative; overflow: hidden;
     }
     .hero-bg {
       position: absolute; inset: 0; pointer-events: none;
       background:
-        radial-gradient(ellipse 80% 50% at 70% 20%, rgba(201,168,76,0.08) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 60% at 10% 80%, rgba(30,60,180,0.12) 0%, transparent 60%);
+        radial-gradient(ellipse 80% 50% at 70% 15%, rgba(201,168,76,0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 60% at 5% 85%, rgba(30,60,180,0.14) 0%, transparent 60%);
     }
     .hero-grid {
       position: absolute; inset: 0; pointer-events: none; opacity: 0.04;
@@ -88,9 +91,9 @@
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(201,168,76,0.08);
       border: 1px solid var(--border);
-      border-radius: 20px; padding: 5px 14px;
+      border-radius: 20px; padding: 6px 16px;
       font-size: 12px; font-weight: 600; color: var(--gold);
-      letter-spacing: 0.5px; margin-bottom: 28px;
+      letter-spacing: 0.4px; margin-bottom: 28px;
       width: fit-content;
     }
     .hero-eyebrow::before {
@@ -104,29 +107,21 @@
       50% { opacity: 0.5; transform: scale(0.8); }
     }
     h1 {
-      font-size: clamp(34px, 9vw, 60px);
-      font-weight: 900; line-height: 1.05;
-      letter-spacing: -2px; margin-bottom: 22px;
+      font-size: clamp(34px, 8.5vw, 58px);
+      font-weight: 900; line-height: 1.08;
+      letter-spacing: -2px; margin-bottom: 24px;
+      max-width: 640px;
     }
     h1 .gold { color: var(--gold); }
-    h1 .underline {
-      position: relative; display: inline-block;
-    }
-    h1 .underline::after {
-      content: '';
-      position: absolute; bottom: -4px; left: 0; right: 0; height: 3px;
-      background: linear-gradient(90deg, var(--gold), transparent);
-      border-radius: 2px;
-    }
     .hero-sub {
       font-size: clamp(15px, 3.5vw, 18px);
-      color: var(--muted); max-width: 520px; line-height: 1.75;
+      color: var(--muted); max-width: 540px; line-height: 1.75;
       margin-bottom: 40px;
     }
     .hero-sub strong { color: var(--text); font-weight: 600; }
-    .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 48px; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 44px; }
     .btn-primary {
-      padding: 15px 28px; border-radius: var(--rs);
+      padding: 16px 30px; border-radius: var(--rs);
       background: var(--gold); color: #060C1C;
       font-weight: 700; font-size: 14px; text-decoration: none;
       display: inline-flex; align-items: center; gap: 8px;
@@ -134,7 +129,7 @@
     }
     .btn-primary:hover { background: var(--gold2); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
     .btn-outline {
-      padding: 15px 28px; border-radius: var(--rs);
+      padding: 16px 30px; border-radius: var(--rs);
       border: 1px solid var(--border); color: var(--text);
       font-weight: 600; font-size: 14px; text-decoration: none;
       display: inline-flex; align-items: center; gap: 8px;
@@ -142,7 +137,7 @@
     }
     .btn-outline:hover { border-color: var(--gold); background: rgba(201,168,76,0.05); transform: translateY(-2px); }
     .hero-trust {
-      display: flex; align-items: center; gap: 8px;
+      display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
       font-size: 12px; color: var(--muted);
     }
     .trust-dots { display: flex; gap: 3px; }
@@ -151,32 +146,52 @@
     .trust-dot:nth-child(2) { background: var(--gold); }
     .trust-dot:nth-child(3) { background: #60a5fa; }
 
-    /* VALUE PROPS */
-    .value-strip {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      background: var(--card);
-      border-top: 1px solid var(--border-s);
-      border-bottom: 1px solid var(--border-s);
+    /* VALUE PROPS — big visual cards */
+    .value-section {
+      padding: 64px 24px;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 100%);
     }
-    .value-col {
-      padding: 36px 24px; text-align: center;
-      border-right: 1px solid var(--border-s);
-      transition: background .3s;
+    .value-grid {
+      display: grid; grid-template-columns: 1fr; gap: 16px;
+      max-width: 1080px; margin: 0 auto;
+    }
+    .value-card {
+      background: var(--card);
+      border: 1px solid var(--border-s);
+      border-radius: 18px;
+      padding: 36px 28px;
+      text-align: center;
+      position: relative; overflow: hidden;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
       cursor: default;
     }
-    .value-col:last-child { border-right: none; }
-    .value-col:hover { background: var(--card2); }
-    .value-icon {
-      font-size: 28px; margin-bottom: 10px;
-      display: block;
+    .value-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0; transition: opacity .3s;
+    }
+    .value-card:hover {
+      transform: translateY(-6px);
+      border-color: var(--border);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.4), var(--shadow-gold);
+    }
+    .value-card:hover::before { opacity: 1; }
+    .value-icon-wrap {
+      width: 72px; height: 72px; margin: 0 auto 20px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, var(--gold-dim), rgba(201,168,76,0.03));
+      border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 34px;
       transition: transform .3s;
     }
-    .value-col:hover .value-icon { transform: scale(1.15) rotate(-5deg); }
+    .value-card:hover .value-icon-wrap { transform: scale(1.1) rotate(-6deg); }
     .value-heading {
-      font-size: 15px; font-weight: 700; margin-bottom: 4px;
-      color: var(--gold);
+      font-size: 24px; font-weight: 800; color: var(--gold);
+      letter-spacing: -0.5px; margin-bottom: 10px;
     }
-    .value-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+    .value-desc { font-size: 14px; color: var(--muted); line-height: 1.6; max-width: 260px; margin: 0 auto; }
 
     /* GENERIC SECTION */
     .section { padding: 80px 24px; }
@@ -193,7 +208,7 @@
       margin-bottom: 14px;
     }
     h2 .gold { color: var(--gold); }
-    .sec-sub { font-size: 15px; color: var(--muted); max-width: 500px; line-height: 1.7; }
+    .sec-sub { font-size: 15px; color: var(--muted); max-width: 520px; line-height: 1.7; }
 
     /* PROBLEMS */
     .problems-grid {
@@ -202,26 +217,26 @@
     }
     .prob-card {
       background: var(--card); border: 1px solid var(--border-s);
-      border-radius: var(--r); padding: 24px 20px;
-      display: flex; align-items: flex-start; gap: 16px;
+      border-radius: var(--r); padding: 28px 22px;
+      text-align: center;
       transition: transform .25s, border-color .25s, box-shadow .25s;
       cursor: default;
     }
     .prob-card:hover {
-      transform: translateY(-4px);
+      transform: translateY(-5px);
       border-color: var(--border);
       box-shadow: var(--shadow-gold);
     }
     .prob-icon {
-      font-size: 24px; flex-shrink: 0;
-      width: 48px; height: 48px; border-radius: 12px;
+      font-size: 30px; margin: 0 auto 16px;
+      width: 60px; height: 60px; border-radius: 16px;
       background: var(--gold-dim);
       display: flex; align-items: center; justify-content: center;
-      transition: background .25s;
+      transition: background .25s, transform .25s;
     }
-    .prob-card:hover .prob-icon { background: rgba(201,168,76,0.22); }
-    .prob-card h3 { font-size: 15px; font-weight: 700; margin-bottom: 5px; }
-    .prob-card p { font-size: 13px; color: var(--muted); line-height: 1.55; }
+    .prob-card:hover .prob-icon { background: rgba(201,168,76,0.22); transform: scale(1.08); }
+    .prob-card h3 { font-size: 18px; font-weight: 700; margin-bottom: 8px; }
+    .prob-card p { font-size: 14px; color: var(--muted); line-height: 1.55; }
 
     /* USE CASES */
     .cases-grid {
@@ -232,268 +247,259 @@
       background: var(--card); border: 1px solid var(--border-s);
       border-radius: var(--r); overflow: hidden;
       transition: transform .25s, box-shadow .25s, border-color .25s;
-      cursor: default;
+      cursor: default; display: flex; flex-direction: column;
     }
     .case-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
       box-shadow: 0 16px 40px rgba(0,0,0,0.4), var(--shadow-gold);
       border-color: var(--border);
     }
     .case-header {
       padding: 20px 22px 14px;
       border-bottom: 1px solid var(--border-s);
-      display: flex; align-items: center; justify-content: space-between;
+      display: flex; align-items: center; justify-content: space-between; gap: 8px;
     }
     .case-type {
       font-size: 11px; font-weight: 700; text-transform: uppercase;
-      letter-spacing: 1.2px; color: var(--gold);
+      letter-spacing: 1px; color: var(--muted);
     }
     .case-theme-badge {
-      font-size: 11px; font-weight: 600; padding: 3px 10px;
-      border-radius: 20px; border: 1px solid var(--border);
-      color: var(--muted);
+      font-size: 11px; font-weight: 700; padding: 4px 11px;
+      border-radius: 20px; background: var(--gold-dim);
+      color: var(--gold); white-space: nowrap;
     }
-    .case-body { padding: 20px 22px; }
-    .case-body h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+    .case-body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+    .case-body h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; line-height: 1.35; }
     .case-body .before {
-      font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 18px;
+      font-size: 13px; color: var(--muted); line-height: 1.55; margin-bottom: 18px; flex: 1;
     }
-    .case-metrics-row {
-      display: flex; gap: 8px; margin-bottom: 18px;
-    }
+    .case-metrics-row { display: flex; gap: 8px; margin-bottom: 18px; }
     .case-met {
       flex: 1; background: var(--bg); border-radius: var(--rs);
-      padding: 12px 8px; text-align: center;
-      border: 1px solid var(--border-s);
+      padding: 12px 6px; text-align: center; border: 1px solid var(--border-s);
     }
-    .case-met-num {
-      font-size: 20px; font-weight: 800; color: var(--gold);
-      letter-spacing: -0.5px; line-height: 1;
-    }
-    .case-met-lbl { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 3px; }
+    .case-met-num { font-size: 19px; font-weight: 800; color: var(--gold); letter-spacing: -0.5px; line-height: 1; }
+    .case-met-lbl { font-size: 9.5px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; }
     .case-quote-box {
       background: var(--bg2); border-left: 3px solid var(--gold);
-      border-radius: 0 var(--rs) var(--rs) 0;
-      padding: 14px 16px;
+      border-radius: 0 var(--rs) var(--rs) 0; padding: 14px 16px;
     }
-    .case-quote-box p { font-size: 13px; font-style: italic; color: var(--text); line-height: 1.6; margin-bottom: 6px; }
-    .case-quote-box cite { font-size: 11px; color: var(--muted); font-style: normal; }
+    .case-quote-box p { font-size: 13px; font-style: italic; color: var(--text); line-height: 1.6; margin-bottom: 10px; }
+    .case-author { display: flex; align-items: center; gap: 10px; }
+    .case-avatar {
+      width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--gold), var(--gold2));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 800; color: #060C1C;
+    }
+    .case-author cite { font-style: normal; }
+    .case-author .name { font-size: 13px; font-weight: 700; color: var(--text); display: block; }
+    .case-author .role { font-size: 11px; color: var(--muted); }
 
     /* ROI CALCULATOR */
     .roi-wrap {
       background: var(--card); border: 1px solid var(--border);
-      border-radius: var(--r); overflow: hidden;
-      margin-top: 40px;
+      border-radius: var(--r); overflow: hidden; margin-top: 40px;
     }
     .roi-header {
       padding: 24px 24px 20px;
       border-bottom: 1px solid var(--border-s);
       background: linear-gradient(135deg, var(--card2), var(--card));
+      display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap;
     }
     .roi-header h3 { font-size: 18px; font-weight: 800; margin-bottom: 4px; }
     .roi-header p { font-size: 13px; color: var(--muted); }
-    .roi-steps-nav {
-      display: flex; padding: 0 24px;
-      border-bottom: 1px solid var(--border-s);
-      gap: 0;
+    .currency-toggle { display: flex; gap: 4px; background: var(--bg); border: 1px solid var(--border-s); border-radius: var(--rs); padding: 4px; }
+    .cur-btn {
+      padding: 7px 14px; border-radius: 6px; border: none; background: none;
+      color: var(--muted); font-size: 12px; font-weight: 700; cursor: pointer;
+      transition: .2s; font-family: inherit;
     }
+    .cur-btn.active { background: var(--gold); color: #060C1C; }
+    .roi-steps-nav { display: flex; padding: 0 24px; border-bottom: 1px solid var(--border-s); overflow-x: auto; }
     .roi-step-tab {
-      padding: 12px 16px; font-size: 12px; font-weight: 600;
+      padding: 12px 14px; font-size: 12px; font-weight: 600; white-space: nowrap;
       color: var(--muted); border-bottom: 2px solid transparent;
       transition: color .2s, border-color .2s;
     }
     .roi-step-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
     .roi-body { padding: 24px; }
-    /* Step 1 — Biz type */
-    .biz-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
-    }
+    .biz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .biz-btn {
       padding: 14px 12px; border-radius: var(--rs);
-      border: 1px solid var(--border-s);
-      background: var(--bg2); color: var(--text);
-      font-size: 13px; font-weight: 600; text-align: left;
-      cursor: pointer; transition: .2s;
-      display: flex; align-items: center; gap: 10px;
+      border: 1px solid var(--border-s); background: var(--bg2); color: var(--text);
+      font-size: 13px; font-weight: 600; text-align: left; cursor: pointer;
+      transition: .2s; display: flex; align-items: center; gap: 10px; font-family: inherit;
     }
     .biz-btn:hover { border-color: var(--gold); background: var(--gold-dim); }
     .biz-btn.selected { border-color: var(--gold); background: rgba(201,168,76,0.12); color: var(--gold); }
-    /* Step 2 — Tasks */
     .tasks-list { display: flex; flex-direction: column; gap: 8px; }
     .task-item {
       padding: 12px 14px; border-radius: var(--rs);
       border: 1px solid var(--border-s); background: var(--bg2);
-      display: flex; align-items: center; gap: 12px;
-      cursor: pointer; transition: .2s;
+      display: flex; align-items: center; gap: 12px; cursor: pointer; transition: .2s;
     }
     .task-item:hover { border-color: var(--border); }
     .task-item.selected { border-color: var(--gold); background: rgba(201,168,76,0.07); }
     .task-check {
-      width: 18px; height: 18px; border-radius: 4px;
-      border: 1.5px solid var(--muted); flex-shrink: 0;
-      display: flex; align-items: center; justify-content: center;
-      transition: .2s;
+      width: 18px; height: 18px; border-radius: 4px; border: 1.5px solid var(--muted);
+      flex-shrink: 0; display: flex; align-items: center; justify-content: center; transition: .2s;
     }
     .task-item.selected .task-check { background: var(--gold); border-color: var(--gold); }
     .task-check svg { display: none; }
     .task-item.selected .task-check svg { display: block; }
     .task-name { font-size: 13px; font-weight: 500; flex: 1; }
     .task-hrs { font-size: 11px; color: var(--muted); }
-    /* Step 3 — Rate */
     .rate-wrap { padding: 10px 0; }
     .rate-label { font-size: 13px; color: var(--muted); margin-bottom: 8px; }
     .rate-display { font-size: 36px; font-weight: 800; color: var(--gold); margin-bottom: 16px; }
+    .rate-display span { font-size: 16px; color: var(--muted); }
     input[type=range] {
       width: 100%; -webkit-appearance: none; height: 4px;
-      background: var(--border-s); border-radius: 2px; outline: none;
-      margin-bottom: 8px;
+      background: var(--border-s); border-radius: 2px; outline: none; margin-bottom: 8px;
     }
     input[type=range]::-webkit-slider-thumb {
-      -webkit-appearance: none; width: 20px; height: 20px;
-      border-radius: 50%; background: var(--gold); cursor: pointer;
-      box-shadow: 0 0 8px rgba(201,168,76,0.5);
+      -webkit-appearance: none; width: 20px; height: 20px; border-radius: 50%;
+      background: var(--gold); cursor: pointer; box-shadow: 0 0 8px rgba(201,168,76,0.5);
     }
     .rate-hints { display: flex; justify-content: space-between; font-size: 11px; color: var(--muted); }
-    /* Results */
     .results-card {
       background: linear-gradient(135deg, var(--card2), var(--card));
-      border: 1px solid var(--border); border-radius: var(--r);
-      padding: 24px;
+      border: 1px solid var(--border); border-radius: var(--r); padding: 24px;
     }
     .results-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 20px; }
     .res-item { text-align: center; }
-    .res-num { font-size: 28px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
-    .res-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.8px; margin-top: 2px; }
+    .res-num { font-size: 26px; font-weight: 900; color: var(--gold); letter-spacing: -1px; }
+    .res-num span { font-size: 15px; }
+    .res-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.6px; margin-top: 2px; }
     .score-bar-wrap { margin-bottom: 20px; }
-    .score-label { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 8px; }
+    .score-label { display: flex; justify-content: space-between; margin-bottom: 8px; }
     .score-bar { height: 8px; background: var(--border-s); border-radius: 4px; overflow: hidden; }
     .score-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--gold), var(--gold2)); transition: width 1s ease; }
     .results-note { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 20px; }
     .roi-nav { display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px; }
     .roi-btn-next {
-      padding: 12px 22px; border-radius: var(--rs);
-      background: var(--gold); color: #060C1C;
-      font-weight: 700; font-size: 13px; border: none;
-      cursor: pointer; transition: .2s;
+      padding: 12px 22px; border-radius: var(--rs); background: var(--gold);
+      color: #060C1C; font-weight: 700; font-size: 13px; border: none; cursor: pointer;
+      transition: .2s; font-family: inherit;
     }
     .roi-btn-next:hover { background: var(--gold2); }
     .roi-btn-back {
-      padding: 12px 18px; border-radius: var(--rs);
-      border: 1px solid var(--border-s); color: var(--muted);
-      background: none; font-size: 13px; cursor: pointer;
-      transition: .2s;
+      padding: 12px 18px; border-radius: var(--rs); border: 1px solid var(--border-s);
+      color: var(--muted); background: none; font-size: 13px; cursor: pointer;
+      transition: .2s; font-family: inherit;
     }
     .roi-btn-back:hover { border-color: var(--border); color: var(--text); }
 
-    /* HOW IT WORKS */
-    .steps { display: flex; flex-direction: column; gap: 16px; margin-top: 40px; }
-    .step {
-      display: flex; gap: 20px; align-items: flex-start;
-      background: var(--card); border: 1px solid var(--border-s);
-      border-radius: var(--r); padding: 24px 20px;
-      transition: transform .25s, border-color .25s, box-shadow .25s;
-      cursor: default;
+    /* TIMELINE — How it works */
+    .timeline { margin-top: 48px; position: relative; }
+    /* vertical line (mobile) */
+    .timeline::before {
+      content: ''; position: absolute; left: 27px; top: 10px; bottom: 10px;
+      width: 2px; background: linear-gradient(to bottom, var(--gold), var(--gold-dim), var(--border-s));
     }
-    .step:hover {
-      transform: translateX(6px);
-      border-color: var(--border);
-      box-shadow: var(--shadow-gold);
+    .tl-item {
+      display: flex; gap: 22px; position: relative; padding-bottom: 36px;
     }
-    .step-num {
-      width: 44px; height: 44px; flex-shrink: 0;
-      background: linear-gradient(135deg, var(--gold-dim), transparent);
-      border: 1px solid var(--border);
-      border-radius: 50%;
+    .tl-item:last-child { padding-bottom: 0; }
+    .tl-node {
+      width: 56px; height: 56px; flex-shrink: 0; position: relative; z-index: 2;
+      border-radius: 50%; background: var(--card2); border: 2px solid var(--gold);
       display: flex; align-items: center; justify-content: center;
-      font-size: 13px; font-weight: 800; color: var(--gold);
-      transition: background .25s;
+      font-size: 20px; box-shadow: 0 0 0 6px var(--bg2), var(--shadow-gold);
+      transition: transform .25s;
     }
-    .step:hover .step-num { background: rgba(201,168,76,0.2); }
-    .step-body h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-    .step-body p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .tl-item:hover .tl-node { transform: scale(1.1); }
+    .tl-content {
+      background: var(--card); border: 1px solid var(--border-s);
+      border-radius: var(--r); padding: 20px; flex: 1;
+      transition: transform .25s, border-color .25s, box-shadow .25s;
+    }
+    .tl-item:hover .tl-content {
+      transform: translateX(6px); border-color: var(--border); box-shadow: var(--shadow-gold);
+    }
+    .tl-time {
+      font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 6px;
+      display: inline-block; padding: 3px 10px; background: var(--gold-dim); border-radius: 20px;
+    }
+    .tl-content h3 { font-size: 17px; font-weight: 700; margin: 8px 0 6px; }
+    .tl-content p { font-size: 13.5px; color: var(--muted); line-height: 1.6; }
 
-    /* FINAL CTA */
+    /* CTA */
     .cta-section { padding: 80px 24px; text-align: center; }
     .cta-box {
       background: var(--card); border: 1px solid var(--border);
       border-radius: var(--r); padding: 48px 24px;
-      position: relative; overflow: hidden;
+      position: relative; overflow: hidden; max-width: 720px; margin: 0 auto;
     }
     .cta-box::before {
-      content: '';
-      position: absolute; top: 0; left: 0; right: 0; height: 2px;
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
     }
     .cta-box::after {
-      content: '';
-      position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+      content: ''; position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
       width: 300px; height: 200px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(201,168,76,0.08), transparent 70%);
-      pointer-events: none;
+      background: radial-gradient(circle, rgba(201,168,76,0.08), transparent 70%); pointer-events: none;
     }
     .cta-box h2 { margin-bottom: 12px; letter-spacing: -1px; }
-    .cta-box p { font-size: 15px; color: var(--muted); max-width: 420px; margin: 0 auto 36px; line-height: 1.7; }
-    .cta-btns { display: flex; flex-direction: column; align-items: center; gap: 12px; }
+    .cta-box p { font-size: 15px; color: var(--muted); max-width: 440px; margin: 0 auto 36px; line-height: 1.7; }
+    .cta-btns { display: flex; flex-direction: column; align-items: center; gap: 14px; }
     .btn-wa {
       display: inline-flex; align-items: center; gap: 10px;
       padding: 16px 32px; border-radius: var(--rs);
-      background: #22c55e; color: #fff;
-      font-weight: 700; font-size: 14px; text-decoration: none;
-      transition: background .2s, transform .15s;
-      width: 100%; max-width: 300px; justify-content: center;
+      background: var(--green); color: #fff; font-weight: 700; font-size: 14px;
+      text-decoration: none; transition: background .2s, transform .15s;
+      width: 100%; max-width: 320px; justify-content: center;
     }
     .btn-wa:hover { background: #16a34a; transform: translateY(-2px); }
     .btn-email-alt {
       display: inline-flex; align-items: center; gap: 8px;
-      font-size: 13px; color: var(--muted); text-decoration: none;
-      transition: color .2s;
+      font-size: 13px; color: var(--muted); text-decoration: none; transition: color .2s;
     }
     .btn-email-alt:hover { color: var(--gold); }
 
     /* ABOUT */
-    .cred-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .cred-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 32px; }
     .cred-list li {
       display: flex; align-items: flex-start; gap: 12px;
       font-size: 14px; color: var(--muted); line-height: 1.55;
-      padding: 14px 16px; background: var(--card); border: 1px solid var(--border-s);
-      border-radius: var(--rs);
-      transition: border-color .2s, transform .2s;
+      padding: 16px 18px; background: var(--card); border: 1px solid var(--border-s);
+      border-radius: var(--rs); transition: border-color .2s, transform .2s;
     }
     .cred-list li:hover { border-color: var(--border); transform: translateX(4px); }
-    .cred-list li::before {
-      content: '✓'; color: var(--gold); font-weight: 700;
-      font-size: 12px; margin-top: 1px; flex-shrink: 0;
-    }
+    .cred-list li::before { content: '✓'; color: var(--gold); font-weight: 700; font-size: 13px; margin-top: 1px; flex-shrink: 0; }
+    .cred-list li strong { color: var(--text); font-weight: 600; }
 
     /* FOOTER */
-    footer {
-      border-top: 1px solid var(--border-s);
-      padding: 28px 24px; text-align: center;
-    }
+    footer { border-top: 1px solid var(--border-s); padding: 28px 24px; text-align: center; }
     footer p { font-size: 12px; color: var(--muted); }
     footer a { color: var(--gold); text-decoration: none; }
 
     /* REVEAL */
     .reveal { opacity: 0; transform: translateY(28px); transition: opacity .6s ease, transform .6s ease; }
     .reveal.visible { opacity: 1; transform: none; }
-    .reveal-l { opacity: 0; transform: translateX(-20px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal-l.visible { opacity: 1; transform: none; }
 
     /* RESPONSIVE */
     @media (min-width: 640px) {
-      .problems-grid { grid-template-columns: repeat(2, 1fr); }
+      .value-grid { grid-template-columns: repeat(3, 1fr); }
+      .problems-grid { grid-template-columns: repeat(3, 1fr); }
       .cases-grid { grid-template-columns: repeat(3, 1fr); }
       .cta-btns { flex-direction: row; justify-content: center; }
       .biz-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (min-width: 900px) {
-      nav, .hero, .section, .cta-section { padding-left: 48px; padding-right: 48px; }
+      nav, .hero, .section, .cta-section, .value-section { padding-left: 48px; padding-right: 48px; }
       .hero { padding-top: 150px; }
-      .problems-grid { grid-template-columns: repeat(3, 1fr); }
-      .steps { flex-direction: row; }
-      .step { flex-direction: column; }
-      .step:hover { transform: translateY(-5px) translateX(0); }
-      .cta-box { padding: 64px 48px; }
+      /* horizontal timeline */
+      .timeline { display: flex; gap: 0; }
+      .timeline::before {
+        left: 10%; right: 10%; top: 28px; bottom: auto; width: auto; height: 2px;
+        background: linear-gradient(to right, var(--gold), var(--gold-dim), var(--border-s));
+      }
+      .tl-item { flex-direction: column; flex: 1; padding-bottom: 0; padding: 0 12px; align-items: center; text-align: center; }
+      .tl-node { margin-bottom: 20px; }
+      .tl-item:hover .tl-content { transform: translateY(-6px); }
     }
   </style>
 </head>
@@ -502,8 +508,8 @@
 <!-- NAV -->
 <nav>
   <a href="#top" class="logo">
-    <div class="logo-mark">AI</div>
-    <span class="logo-text">A<span>Intel</span></span>
+    <span class="logo-mark">AI</span>
+    <span class="logo-text">AI<span class="gold">ntel</span></span>
   </a>
   <a href="#contact" class="nav-cta">Free Audit →</a>
 </nav>
@@ -512,19 +518,20 @@
 <section class="hero" id="top">
   <div class="hero-bg"></div>
   <div class="hero-grid"></div>
-  <div class="hero-eyebrow">AI Automation for Growing Businesses</div>
+  <div class="hero-eyebrow">AI automation for businesses that mean business</div>
   <h1>
-    3 automations.<br>
-    <span class="gold">That's all it takes.</span>
+    You're losing money<br>every day —<br>
+    <span class="gold">you just can't see where.</span>
   </h1>
   <p class="hero-sub">
-    Most business owners are <strong>haemorrhaging hours</strong> on tasks AI handles in seconds.
-    AIntel finds the 3 that move the needle most — then builds them.
-    You wake up to results, not a backlog.
+    Slow replies. Missed follow-ups. Hours your team burns on work a machine should be doing.
+    It all adds up to <strong>leads and revenue quietly walking out the door.</strong>
+    AIntel finds the leaks and builds the AI that plugs them — so you get
+    <strong>more sales, lower costs, and your time back.</strong>
   </p>
   <div class="hero-btns">
-    <a href="#roi" class="btn-primary">Find my 3 automations →</a>
-    <a href="#cases" class="btn-outline">See real results ↓</a>
+    <a href="#roi" class="btn-primary">Show me where I'm losing money →</a>
+    <a href="#cases" class="btn-outline">See proof ↓</a>
   </div>
   <div class="hero-trust">
     <div class="trust-dots">
@@ -536,75 +543,71 @@
   </div>
 </section>
 
-<!-- VALUE STRIP -->
-<div class="value-strip reveal">
-  <div class="value-col">
-    <span class="value-icon">⏱</span>
-    <div class="value-heading">More Time</div>
-    <div class="value-desc">Stop doing manually what AI handles in seconds. Get your hours back.</div>
+<!-- VALUE PROPS -->
+<section class="value-section">
+  <div class="value-grid">
+    <div class="value-card reveal">
+      <div class="value-icon-wrap">⏱</div>
+      <div class="value-heading">More Time</div>
+      <div class="value-desc">Stop doing manually what AI handles in seconds. Win back 10–20 hours every week.</div>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-icon-wrap">💰</div>
+      <div class="value-heading">Less Cost</div>
+      <div class="value-desc">Cut the staff hours spent on repetitive admin. Same output, a fraction of the spend.</div>
+    </div>
+    <div class="value-card reveal">
+      <div class="value-icon-wrap">📈</div>
+      <div class="value-heading">More Sales</div>
+      <div class="value-desc">Reply in seconds, follow up automatically, capture every lead — even at 2am.</div>
+    </div>
   </div>
-  <div class="value-col">
-    <span class="value-icon">💰</span>
-    <div class="value-heading">Less Cost</div>
-    <div class="value-desc">Cut staff hours spent on repetitive tasks. Same output, fraction of the spend.</div>
-  </div>
-  <div class="value-col">
-    <span class="value-icon">📈</span>
-    <div class="value-heading">More Sales</div>
-    <div class="value-desc">Capture every lead 24/7. Faster replies. Better follow-up. More closed deals.</div>
-  </div>
-</div>
+</section>
 
 <!-- PROBLEMS -->
 <section class="section" id="problems">
-  <div class="reveal">
-    <div class="sec-eyebrow">Sound familiar?</div>
-    <h2>You're the most expensive person<br>doing the <span class="gold">cheapest work</span> in your business.</h2>
-    <p class="sec-sub">These are the three things silently bleeding time, money, and growth from most business owners.</p>
+  <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto;">
+    <div class="sec-eyebrow" style="justify-content:center;">The hidden cost</div>
+    <h2>Be honest.<br>How much of your week<br><span class="gold">looks like this?</span></h2>
+    <p class="sec-sub" style="margin:0 auto;">Every one of these is a task AI can do faster, cheaper, and around the clock.</p>
   </div>
   <div class="problems-grid">
     <div class="prob-card reveal">
       <div class="prob-icon">💬</div>
-      <div>
-        <h3>Leads slipping through the cracks</h3>
-        <p>A customer messages at 11pm. No one replies until morning. They've already moved on — to your competitor who responded in 30 seconds.</p>
-      </div>
+      <h3>Same questions, all day</h3>
+      <p>Your team answers the same things one by one — even at 11pm, even on weekends.</p>
     </div>
     <div class="prob-card reveal">
       <div class="prob-icon">🔁</div>
-      <div>
-        <h3>The same tasks, every single day</h3>
-        <p>Invoices. Follow-ups. Scheduling. Data entry. You didn't start a business to spend 3 hours a day on this. But here you are.</p>
-      </div>
+      <h3>Chasing payments by hand</h3>
+      <p>Invoices, reminders, follow-ups — done manually, one at a time, every single week.</p>
     </div>
     <div class="prob-card reveal">
       <div class="prob-icon">📊</div>
-      <div>
-        <h3>Flying blind on your numbers</h3>
-        <p>Your revenue is split across WhatsApp chats, Excel sheets and your memory. You can't grow what you can't see clearly.</p>
-      </div>
+      <h3>Guessing your numbers</h3>
+      <p>Revenue scattered across chats and spreadsheets. No clear picture until it's too late.</p>
     </div>
   </div>
 </section>
 
 <!-- USE CASES -->
 <section class="section section-dark" id="cases">
-  <div class="reveal">
-    <div class="sec-eyebrow">Real results. Real businesses.</div>
-    <h2>What happens when you<br><span class="gold">automate the right 3 things.</span></h2>
-    <p class="sec-sub">Three businesses. Three different bottlenecks. One outcome — they got their time, money, and growth back.</p>
+  <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto;">
+    <div class="sec-eyebrow" style="justify-content:center;">Real founders. Real results.</div>
+    <h2>Don't take our word for it.<br><span class="gold">Take theirs.</span></h2>
+    <p class="sec-sub" style="margin:0 auto;">Three founders. Three industries. One thing in common — they stopped doing it the slow way.</p>
   </div>
   <div class="cases-grid">
 
-    <!-- Case 1: Time -->
+    <!-- Case 1: Time — Sherman -->
     <div class="case-card reveal">
       <div class="case-header">
-        <span class="case-type">Service Business · Sabah</span>
+        <span class="case-type">Laundry · Subscription</span>
         <span class="case-theme-badge">⏱ More Time</span>
       </div>
       <div class="case-body">
-        <h3>Laundry subscription service loses 3 hrs/day to WhatsApp</h3>
-        <p class="before">Customers asking the same questions around the clock — packages, pickup times, pricing. Staff tied up responding manually. After 6pm, messages piled up and leads went cold overnight.</p>
+        <h3>Lost 3 hours a day to repeat WhatsApp questions</h3>
+        <p class="before">Customers asking the same things around the clock — packages, pickup, pricing. After 6pm, messages piled up and leads went cold overnight.</p>
         <div class="case-metrics-row">
           <div class="case-met"><div class="case-met-num">80%</div><div class="case-met-lbl">CS automated</div></div>
           <div class="case-met"><div class="case-met-num">72h</div><div class="case-met-lbl">Build time</div></div>
@@ -612,49 +615,58 @@
         </div>
         <div class="case-quote-box">
           <p>"We used to spend hours answering the same questions every day. Now the system handles it while we sleep — and we haven't missed a lead since."</p>
-          <cite>— Founder, laundry subscription business, Sabah</cite>
+          <div class="case-author">
+            <div class="case-avatar">S</div>
+            <cite><span class="name">Sherman</span><span class="role">Founder & CEO, Laundry Co.</span></cite>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Case 2: More Sales -->
+    <!-- Case 2: Sales — Hayden -->
     <div class="case-card reveal">
       <div class="case-header">
-        <span class="case-type">E-Commerce · Malaysia</span>
+        <span class="case-type">E-Commerce · Lifestyle</span>
         <span class="case-theme-badge">📈 More Sales</span>
       </div>
       <div class="case-body">
-        <h3>E-commerce brand losing repeat buyers to slow follow-up</h3>
-        <p class="before">Dozens of order inquiries daily handled manually. No automated post-purchase sequence. Customers who bought once rarely came back — not because they were unhappy, but because no one stayed in touch.</p>
+        <h3>Losing repeat buyers to slow, manual follow-up</h3>
+        <p class="before">Dozens of order inquiries daily, all handled by hand. No automated post-purchase flow. Customers bought once and were never heard from again.</p>
         <div class="case-metrics-row">
           <div class="case-met"><div class="case-met-num">40%</div><div class="case-met-lbl">More repeat sales</div></div>
-          <div class="case-met"><div class="case-met-num">&lt;1min</div><div class="case-met-lbl">Response time</div></div>
-          <div class="case-met"><div class="case-met-num">3×</div><div class="case-met-lbl">Lead follow-up</div></div>
+          <div class="case-met"><div class="case-met-num">&lt;1min</div><div class="case-met-lbl">Reply time</div></div>
+          <div class="case-met"><div class="case-met-num">3×</div><div class="case-met-lbl">Follow-up rate</div></div>
         </div>
         <div class="case-quote-box">
-          <p>"I didn't realise how much revenue I was leaving on the table just by not following up. The AI does it automatically — it's like having a sales assistant that never clocks off."</p>
-          <cite>— Founder, lifestyle e-commerce brand, Malaysia</cite>
+          <p>"I had no idea how much revenue I was leaving on the table by not following up. The AI does it automatically — like a sales assistant that never clocks off."</p>
+          <div class="case-author">
+            <div class="case-avatar">H</div>
+            <cite><span class="name">Hayden</span><span class="role">Founder & CEO, E-Commerce Brand</span></cite>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Case 3: Less Cost -->
+    <!-- Case 3: Cost — Lee -->
     <div class="case-card reveal">
       <div class="case-header">
-        <span class="case-type">Services Business · Malaysia</span>
+        <span class="case-type">Professional Services</span>
         <span class="case-theme-badge">💰 Less Cost</span>
       </div>
       <div class="case-body">
-        <h3>Service business cuts 15 hrs/week of manual admin</h3>
-        <p class="before">Scheduling, invoicing, and follow-up reminders all done by hand. Staff spending the majority of their time on admin instead of delivering the service. Every week, hours and money quietly walked out the door.</p>
+        <h3>Cut 15 hours a week of manual admin</h3>
+        <p class="before">Scheduling, invoicing, and reminders all done by hand. Staff spending most of their time on admin instead of serving clients. Money quietly walking out weekly.</p>
         <div class="case-metrics-row">
-          <div class="case-met"><div class="case-met-num">15h</div><div class="case-met-lbl">Saved per week</div></div>
+          <div class="case-met"><div class="case-met-num">15h</div><div class="case-met-lbl">Saved / week</div></div>
           <div class="case-met"><div class="case-met-num">60%</div><div class="case-met-lbl">Admin cost cut</div></div>
           <div class="case-met"><div class="case-met-num">2wk</div><div class="case-met-lbl">Time to live</div></div>
         </div>
         <div class="case-quote-box">
-          <p>"We were paying staff to do things a system could do in milliseconds. The ROI was obvious within the first month. I only wish we'd done it sooner."</p>
-          <cite>— Operations Manager, service business, Malaysia</cite>
+          <p>"We were paying staff to do what a system does in milliseconds. The ROI was obvious within the first month. I only wish we'd done it sooner."</p>
+          <div class="case-author">
+            <div class="case-avatar">L</div>
+            <cite><span class="name">Lee</span><span class="role">Founder & CEO, Services Firm</span></cite>
+          </div>
         </div>
       </div>
     </div>
@@ -664,56 +676,64 @@
 
 <!-- ROI CALCULATOR -->
 <section class="section" id="roi">
-  <div class="reveal">
-    <div class="sec-eyebrow">AI ROI Calculator</div>
+  <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto;">
+    <div class="sec-eyebrow" style="justify-content:center;">AI ROI Calculator</div>
     <h2>See exactly how much<br>your manual work <span class="gold">costs you.</span></h2>
-    <p class="sec-sub">4 quick questions. Instant results. Find out which automations will pay for themselves fastest.</p>
+    <p class="sec-sub" style="margin:0 auto;">4 quick questions. Instant results. No email required to see your number.</p>
   </div>
 
-  <div class="roi-wrap reveal">
+  <div class="roi-wrap reveal" style="max-width:720px; margin-left:auto; margin-right:auto;">
     <div class="roi-header">
-      <h3>Your AI Savings Calculator</h3>
-      <p>Takes under 2 minutes. No email required to see your results.</p>
+      <div>
+        <h3>Your AI Savings Calculator</h3>
+        <p>Takes under 2 minutes.</p>
+      </div>
+      <div class="currency-toggle">
+        <button class="cur-btn active" data-cur="MYR" onclick="setCurrency('MYR')">RM</button>
+        <button class="cur-btn" data-cur="USD" onclick="setCurrency('USD')">USD</button>
+        <button class="cur-btn" data-cur="SGD" onclick="setCurrency('SGD')">SGD</button>
+      </div>
     </div>
     <div class="roi-steps-nav">
-      <div class="roi-step-tab active" id="tab1">① Business type</div>
+      <div class="roi-step-tab active" id="tab1">① Business</div>
       <div class="roi-step-tab" id="tab2">② Time leaks</div>
       <div class="roi-step-tab" id="tab3">③ Staff cost</div>
-      <div class="roi-step-tab" id="tab4">④ Your results</div>
+      <div class="roi-step-tab" id="tab4">④ Results</div>
     </div>
-    <div class="roi-body" id="roi-body">
-      <!-- injected by JS -->
-    </div>
+    <div class="roi-body" id="roi-body"></div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
+<!-- HOW IT WORKS — TIMELINE -->
 <section class="section section-dark" id="how">
-  <div class="reveal">
-    <div class="sec-eyebrow">How it works</div>
-    <h2>Three steps.<br><span class="gold">No mystery, no fluff.</span></h2>
-    <p class="sec-sub">You always know what's happening, what's next, and what it costs. Nothing moves without your sign-off.</p>
+  <div class="reveal" style="text-align:center; max-width:560px; margin:0 auto;">
+    <div class="sec-eyebrow" style="justify-content:center;">How it works</div>
+    <h2>From first call to results<br><span class="gold">in three steps.</span></h2>
+    <p class="sec-sub" style="margin:0 auto;">You always know what's happening, what's next, and what it costs. Nothing moves without your sign-off.</p>
   </div>
-  <div class="steps">
-    <div class="step reveal">
-      <div class="step-num">01</div>
-      <div class="step-body">
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-node">🔍</div>
+      <div class="tl-content">
+        <span class="tl-time">Day 0</span>
         <h3>Free AI Audit</h3>
-        <p>30 minutes. We map your top 3 manual bottlenecks, calculate the real cost, and tell you which to automate first. The report is yours — no obligation, no strings.</p>
+        <p>30 minutes. We map your top 3 bottlenecks, calculate the real cost, and tell you which to automate first. The report is yours — no obligation.</p>
       </div>
     </div>
-    <div class="step reveal">
-      <div class="step-num">02</div>
-      <div class="step-body">
+    <div class="tl-item reveal">
+      <div class="tl-node">⚙️</div>
+      <div class="tl-content">
+        <span class="tl-time">Weeks 1–4</span>
         <h3>We Build It</h3>
-        <p>Working AI systems — not slides — within 2 to 4 weeks. WhatsApp bots, auto-invoicing, inbox AI, reporting. Whatever moves your needle most, scoped to a fixed price.</p>
+        <p>Working AI systems — not slides — in 2 to 4 weeks. WhatsApp bots, auto-invoicing, inbox AI, reporting. Whatever moves your needle most, at a fixed price.</p>
       </div>
     </div>
-    <div class="step reveal">
-      <div class="step-num">03</div>
-      <div class="step-body">
+    <div class="tl-item reveal">
+      <div class="tl-node">📈</div>
+      <div class="tl-content">
+        <span class="tl-time">Ongoing · 90-day tuning</span>
         <h3>You See Results</h3>
-        <p>Measured against your own baseline. We train your team in plain language, hand over the system, and tune for 90 days. Miss the target? We fix it on our time.</p>
+        <p>Measured against your own baseline. We train your team in plain language, hand it over, and tune for 90 days. Miss the target? We fix it on our time.</p>
       </div>
     </div>
   </div>
@@ -721,17 +741,17 @@
 
 <!-- ABOUT -->
 <section class="section" id="about">
-  <div class="reveal">
+  <div class="reveal" style="max-width:600px;">
     <div class="sec-eyebrow">Who you're working with</div>
     <h2>Built by an operator.<br><span class="gold">Not a generic agency.</span></h2>
-    <p class="sec-sub" style="margin-bottom:32px;">I spent years leading AI transformation at a major investment holding company in Malaysia — building automation systems that actually got used by real teams. I started AIntel because most business owners don't have the time to assemble these tools themselves. That's the job.</p>
+    <p class="sec-sub" style="margin-bottom:8px;">I've spent years leading AI transformation inside one of the region's largest companies — building automation systems real teams actually use every day. I started AIntel because most business owners don't have the time to assemble these tools themselves. That's the job.</p>
   </div>
   <ul class="cred-list">
-    <li class="reveal">PMP Certified — Project Management Professional (2026)</li>
-    <li class="reveal">Led enterprise AI automation projects at major investment holding company, Kuala Lumpur</li>
-    <li class="reveal">Built and deployed real AI systems for SMEs — from zero to live in days, not months</li>
-    <li class="reveal">You work with us directly. No offshore team, no junior account managers</li>
-    <li class="reveal">No jargon — we translate what AI can do into plain language your team can actually use</li>
+    <li class="reveal"><strong>PMP® Certified</strong> — with the latest Generative AI in Project Management certification</li>
+    <li class="reveal">Led <strong>enterprise AI automation projects</strong> for one of Southeast Asia's largest investment holding conglomerates</li>
+    <li class="reveal">Built and deployed real AI systems for SMEs — <strong>live in days, not months</strong></li>
+    <li class="reveal">You work <strong>directly with the founders</strong> — no offshore team, no junior account managers</li>
+    <li class="reveal">We only grow when you grow — so every build is a genuine <strong>win-win</strong>, never a one-off invoice</li>
   </ul>
 </section>
 
@@ -745,9 +765,7 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         WhatsApp Reuben
       </a>
-      <a href="mailto:reubencolin10@gmail.com" class="btn-email-alt">
-        Or email reubencolin10@gmail.com →
-      </a>
+      <a href="mailto:reubencolin10@gmail.com" class="btn-email-alt">Or email reubencolin10@gmail.com →</a>
     </div>
   </div>
 </div>
@@ -761,29 +779,42 @@
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }});
 }, { threshold: 0.08 });
-document.querySelectorAll('.reveal, .reveal-l').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 // ─── ROI CALCULATOR ───
+const CURRENCIES = {
+  MYR: { sym:'RM ',  min:10, max:100, step:5, def:25 },
+  USD: { sym:'$',    min:5,  max:60,  step:5, def:15 },
+  SGD: { sym:'S$',   min:8,  max:80,  step:5, def:20 },
+};
 const BIZ_TYPES = [
-  { id:'retail',   label:'🛍️ Retail',                   },
-  { id:'fnb',      label:'🍜 F&B',                      },
-  { id:'services', label:'💼 Professional Services',    },
-  { id:'health',   label:'🏥 Healthcare / Clinic',      },
-  { id:'ecomm',    label:'📦 E-commerce',               },
-  { id:'other',    label:'⚡ Other',                    },
+  { id:'retail',   label:'🛍️ Retail' },
+  { id:'fnb',      label:'🍜 F&B' },
+  { id:'services', label:'💼 Professional Services' },
+  { id:'health',   label:'🏥 Healthcare / Clinic' },
+  { id:'ecomm',    label:'📦 E-commerce' },
+  { id:'other',    label:'⚡ Other' },
 ];
 const TASKS = [
-  { id:'inquiries',  label:'Answering customer inquiries',       hrs:8  },
-  { id:'scheduling', label:'Appointment & order scheduling',     hrs:4  },
-  { id:'invoices',   label:'Invoicing & payment follow-up',      hrs:3  },
-  { id:'reporting',  label:'Sales data entry & reporting',       hrs:5  },
-  { id:'social',     label:'Social media content & posting',     hrs:4  },
-  { id:'followup',   label:'Lead & customer follow-up reminders',hrs:4  },
-  { id:'documents',  label:'Quotes, proposals & documents',      hrs:5  },
-  { id:'inventory',  label:'Inventory tracking & reorders',      hrs:4  },
+  { id:'inquiries',  label:'Answering customer inquiries',        hrs:8 },
+  { id:'scheduling', label:'Appointment & order scheduling',      hrs:4 },
+  { id:'invoices',   label:'Invoicing & payment follow-up',       hrs:3 },
+  { id:'reporting',  label:'Sales data entry & reporting',        hrs:5 },
+  { id:'social',     label:'Social media content & posting',      hrs:4 },
+  { id:'followup',   label:'Lead & customer follow-up reminders', hrs:4 },
+  { id:'documents',  label:'Quotes, proposals & documents',       hrs:5 },
+  { id:'inventory',  label:'Inventory tracking & reorders',       hrs:4 },
 ];
 
-let state = { step:1, bizType:null, tasks:new Set(), rate:25 };
+let state = { step:1, currency:'MYR', bizType:null, tasks:new Set(), rate:CURRENCIES.MYR.def };
+
+function setCurrency(c) {
+  state.currency = c;
+  state.rate = CURRENCIES[c].def;
+  document.querySelectorAll('.cur-btn').forEach(b => b.classList.toggle('active', b.dataset.cur===c));
+  renderROI();
+}
+function fmtMoney(v) { return CURRENCIES[state.currency].sym + Math.round(v).toLocaleString(); }
 
 function tabs() {
   [1,2,3,4].forEach(i => {
@@ -796,6 +827,7 @@ function renderROI() {
   tabs();
   const b = document.getElementById('roi-body');
   if (!b) return;
+  const cur = CURRENCIES[state.currency];
 
   if (state.step===1) {
     b.innerHTML = `
@@ -803,17 +835,14 @@ function renderROI() {
       <div class="biz-grid">
         ${BIZ_TYPES.map(t=>`<button class="biz-btn${state.bizType===t.id?' selected':''}" onclick="selectBiz('${t.id}')">${t.label}</button>`).join('')}
       </div>
-      <div class="roi-nav"><button class="roi-btn-next" onclick="nextStep()">Next →</button></div>
-    `;
+      <div class="roi-nav"><button class="roi-btn-next" onclick="nextStep()">Next →</button></div>`;
   } else if (state.step===2) {
     b.innerHTML = `
-      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Which tasks eat up the most time in your business? <span style="color:var(--gold)">(select all that apply)</span></p>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:16px;">Which tasks eat the most time? <span style="color:var(--gold)">(select all that apply)</span></p>
       <div class="tasks-list">
         ${TASKS.map(t=>`
           <div class="task-item${state.tasks.has(t.id)?' selected':''}" onclick="toggleTask('${t.id}')">
-            <div class="task-check">
-              <svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#060C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </div>
+            <div class="task-check"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l3 3 5-6" stroke="#060C1C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
             <span class="task-name">${t.label}</span>
             <span class="task-hrs">~${t.hrs}h/wk</span>
           </div>`).join('')}
@@ -821,76 +850,60 @@ function renderROI() {
       <div class="roi-nav">
         <button class="roi-btn-back" onclick="prevStep()">← Back</button>
         <button class="roi-btn-next" onclick="nextStep()">Next →</button>
-      </div>
-    `;
+      </div>`;
   } else if (state.step===3) {
     b.innerHTML = `
       <div class="rate-wrap">
-        <p class="rate-label">What's the average hourly cost of your staff? (salary + overhead)</p>
-        <div class="rate-display">RM ${state.rate}<span style="font-size:16px;color:var(--muted)">/hr</span></div>
-        <input type="range" min="10" max="100" step="5" value="${state.rate}" oninput="updateRate(this.value)">
-        <div class="rate-hints"><span>RM 10</span><span>RM 50</span><span>RM 100</span></div>
+        <p class="rate-label">Average hourly cost of your staff (salary + overhead)</p>
+        <div class="rate-display">${cur.sym}${state.rate}<span>/hr</span></div>
+        <input type="range" min="${cur.min}" max="${cur.max}" step="${cur.step}" value="${state.rate}" oninput="updateRate(this.value)">
+        <div class="rate-hints"><span>${cur.sym}${cur.min}</span><span>${cur.sym}${cur.max}</span></div>
       </div>
       <div class="roi-nav">
         <button class="roi-btn-back" onclick="prevStep()">← Back</button>
         <button class="roi-btn-next" onclick="nextStep()">Calculate →</button>
-      </div>
-    `;
+      </div>`;
   } else if (state.step===4) {
-    const totalHrsWk = [...state.tasks].reduce((s,id)=>s+(TASKS.find(t=>t.id===id)?.hrs||0),0);
-    const totalHrsMth = Math.round(totalHrsWk * 4.33);
-    const savedHrs = Math.round(totalHrsMth * 0.70);
-    const savedRM = savedHrs * state.rate;
-    const savedYear = savedRM * 12;
+    const hrsWk = [...state.tasks].reduce((s,id)=>s+(TASKS.find(t=>t.id===id)?.hrs||0),0);
+    const hrsMth = Math.round(hrsWk * 4.33);
+    const savedHrs = Math.round(hrsMth * 0.70);
+    const savedMoney = savedHrs * state.rate;
+    const savedYear = savedMoney * 12;
     const score = Math.min(98, Math.round((state.tasks.size / TASKS.length) * 100 * 1.4));
-    const tasks = [...state.tasks];
-    const topTask = TASKS.filter(t=>tasks.includes(t.id)).sort((a,b)=>b.hrs-a.hrs)[0];
+    const topTask = TASKS.filter(t=>state.tasks.has(t.id)).sort((a,b)=>b.hrs-a.hrs)[0];
+    const topCost = topTask ? Math.round(topTask.hrs*4.33*0.7*state.rate) : 0;
 
     b.innerHTML = `
       <div class="results-card">
-        <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Based on your inputs — here's what AI automation could save your business:</p>
+        <p style="font-size:13px;color:var(--muted);margin-bottom:20px;">Here's what AI automation could save your business:</p>
         <div class="results-grid">
-          <div class="res-item">
-            <div class="res-num" id="cnt-hrs">0</div>
-            <div class="res-lbl">Hours saved / month</div>
-          </div>
-          <div class="res-item">
-            <div class="res-num" id="cnt-rm">RM 0</div>
-            <div class="res-lbl">Staff cost saved / month</div>
-          </div>
-          <div class="res-item">
-            <div class="res-num" id="cnt-yr">RM 0</div>
-            <div class="res-lbl">Annual savings</div>
-          </div>
-          <div class="res-item">
-            <div class="res-num" style="color:${score>70?'#4ade80':'var(--gold)'}">${score}<span style="font-size:16px">/100</span></div>
-            <div class="res-lbl">AI Readiness Score</div>
-          </div>
+          <div class="res-item"><div class="res-num" id="cnt-hrs">0</div><div class="res-lbl">Hours saved / month</div></div>
+          <div class="res-item"><div class="res-num" id="cnt-money">0</div><div class="res-lbl">Cost saved / month</div></div>
+          <div class="res-item"><div class="res-num" id="cnt-yr">0</div><div class="res-lbl">Saved / year</div></div>
+          <div class="res-item"><div class="res-num" style="color:${score>70?'#4ade80':'var(--gold)'}">${score}<span>/100</span></div><div class="res-lbl">AI Readiness</div></div>
         </div>
         <div class="score-bar-wrap">
           <div class="score-label"><span style="font-size:12px;color:var(--muted)">Automation potential</span><span style="font-size:12px;color:var(--gold)">${score}%</span></div>
           <div class="score-bar"><div class="score-fill" id="score-fill" style="width:0%"></div></div>
         </div>
         <p class="results-note">
-          ${topTask ? `Your biggest quick win: <strong style="color:var(--text)">${topTask.label}</strong> alone is costing ~RM ${Math.round(topTask.hrs*4.33*0.7*state.rate).toLocaleString()} per month in manual staff time.<br><br>` : ''}
-          A free AI audit takes 30 minutes — and you'll walk away knowing exactly which automations to build first.
+          ${topTask ? `Your biggest quick win: <strong style="color:var(--text)">${topTask.label}</strong> alone costs ~${fmtMoney(topCost)} per month in manual staff time.<br><br>` : ''}
+          A free AI audit takes 30 minutes — you'll walk away knowing exactly which automations to build first.
         </p>
-        <a href="https://wa.me/60173886995?text=Hi%20Reuben%2C%20I%20just%20used%20the%20ROI%20calculator%20and%20I%27d%20like%20to%20book%20a%20free%20AI%20audit." class="btn-wa" style="width:100%;max-width:none;justify-content:center;">
+        <a href="https://wa.me/60173886995?text=Hi%20Reuben%2C%20I%20just%20used%20the%20ROI%20calculator%20and%20I'd%20like%20to%20book%20a%20free%20AI%20audit." class="btn-wa" style="width:100%;max-width:none;">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Book my free AI audit call today →
         </a>
       </div>
       <div class="roi-nav" style="justify-content:flex-start;margin-top:12px;">
         <button class="roi-btn-back" onclick="prevStep()">← Recalculate</button>
-      </div>
-    `;
-    // Animate count-up
+      </div>`;
     setTimeout(()=>{
       countUp('cnt-hrs', savedHrs, v => v);
-      countUp('cnt-rm', savedRM, v => 'RM '+v.toLocaleString());
-      countUp('cnt-yr', savedYear, v => 'RM '+v.toLocaleString());
+      countUp('cnt-money', savedMoney, v => fmtMoney(v));
+      countUp('cnt-yr', savedYear, v => fmtMoney(v));
       const fill = document.getElementById('score-fill');
-      if(fill) fill.style.width = score+'%';
+      if (fill) fill.style.width = score+'%';
     }, 100);
   }
 }
@@ -901,12 +914,11 @@ function countUp(id, target, fmt, dur=1200) {
     if (!start) start = now;
     const t = Math.min((now-start)/dur, 1);
     const ease = t<0.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2;
-    el.textContent = fmt(Math.round(target*ease));
+    el.innerHTML = fmt(Math.round(target*ease));
     if (t<1) requestAnimationFrame(tick);
   };
   requestAnimationFrame(tick);
 }
-
 function selectBiz(id) { state.bizType = id; renderROI(); }
 function toggleTask(id) { state.tasks.has(id) ? state.tasks.delete(id) : state.tasks.add(id); renderROI(); }
 function updateRate(v) { state.rate = parseInt(v); renderROI(); }
@@ -916,7 +928,6 @@ function nextStep() {
   if (state.step < 4) { state.step++; renderROI(); }
 }
 function prevStep() { if (state.step>1) { state.step--; renderROI(); } }
-
 renderROI();
 </script>
 </body>
