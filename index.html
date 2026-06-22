@@ -333,6 +333,9 @@
     .case-author cite { font-style: normal; }
     .case-author .name { font-size: 13px; font-weight: 700; color: var(--text); display: block; }
     .case-author .role { font-size: 11px; color: var(--muted); }
+    .case-built { background: var(--bg2); border-left: 3px solid var(--gold); border-radius: 0 var(--rs) var(--rs) 0; padding: 14px 16px; }
+    .case-built .lbl { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--gold); margin-bottom: 6px; }
+    .case-built p { font-size: 13px; color: var(--text); line-height: 1.58; }
 
     /* ROI CALCULATOR */
     .roi-wrap { background: var(--card); border: 1px solid var(--border); border-radius: var(--r); overflow: hidden; margin: 40px auto 0; max-width: 720px; }
@@ -627,77 +630,68 @@
 <section class="section section-dark" id="cases">
   <div class="container">
     <div class="reveal sec-head-center">
-      <div class="sec-eyebrow center">Real founders. Real results.</div>
-      <h2>Don't take our word for it.<br><span class="gold">Take theirs.</span></h2>
-      <p class="sec-sub">Three founders. Three industries. One thing in common, they stopped doing it the slow way.</p>
+      <div class="sec-eyebrow center">Real projects. Real numbers.</div>
+      <h2>Don't take our word for it.<br><span class="gold">Look at the work.</span></h2>
+      <p class="sec-sub">From a 100+ kiosk retail chain to a multi-million dollar Shopee seller to a regional conglomerate, here's what we built and what it changed.</p>
     </div>
     <div class="cases-grid">
 
       <div class="case-card reveal">
         <div class="case-header">
-          <span class="case-type">Laundry · Subscription</span>
+          <span class="case-type">Retail & Service Chain · Malaysia</span>
           <span class="case-theme-badge">⏱ More Time</span>
         </div>
         <div class="case-body">
-          <h3>Lost 3 hours a day to repeat WhatsApp questions</h3>
-          <p class="before">Customers asking the same things around the clock: packages, pickup, pricing. After 6pm, messages piled up and leads went cold overnight.</p>
+          <h3>Running 100+ kiosks on spreadsheets, calls and guesswork</h3>
+          <p class="before">No centralised view across 100+ locations. Inventory and operations tracked by hand, so staff burned time on status updates instead of serving customers.</p>
           <div class="case-metrics-row">
-            <div class="case-met"><div class="case-met-num">80%</div><div class="case-met-lbl">Customer service automated</div></div>
-            <div class="case-met"><div class="case-met-num">72h</div><div class="case-met-lbl">Build time</div></div>
-            <div class="case-met"><div class="case-met-num">24/7</div><div class="case-met-lbl">Always on</div></div>
+            <div class="case-met"><div class="case-met-num">100+</div><div class="case-met-lbl">Locations unified</div></div>
+            <div class="case-met"><div class="case-met-num">Zero</div><div class="case-met-lbl">Manual tracking</div></div>
+            <div class="case-met"><div class="case-met-num">24/7</div><div class="case-met-lbl">Live visibility</div></div>
           </div>
-          <div class="case-quote-box">
-            <p>"We used to spend hours answering the same questions every day. Now the system handles it while we sleep, and we haven't missed a lead since."</p>
-            <div class="case-author">
-              <div class="case-avatar">S</div>
-              <cite><span class="name">Sherman</span><span class="role">Founder & CEO, Laundry Co.</span></cite>
-            </div>
+          <div class="case-built">
+            <div class="lbl">What we built</div>
+            <p>An automated inventory and operations system across every branch, with real-time visibility, automated alerts and centralised reporting. Zero manual consolidation.</p>
           </div>
         </div>
       </div>
 
       <div class="case-card reveal">
         <div class="case-header">
-          <span class="case-type">E-Commerce · Lifestyle</span>
+          <span class="case-type">E-Commerce · Beauty & Health</span>
           <span class="case-theme-badge">📈 More Sales</span>
         </div>
         <div class="case-body">
-          <h3>Losing repeat buyers to slow, manual follow up</h3>
-          <p class="before">Dozens of order inquiries daily, all handled by hand. No automated post purchase flow. Customers bought once and were never heard from again.</p>
+          <h3>Every product launch ate 1.5 hours of manual checks</h3>
+          <p class="before">A multi-million dollar Shopee seller capped at 3 product reviews a day: price sourcing, margins, competitor and seller-origin checks, all by hand, at RM3,700/month in staff time.</p>
           <div class="case-metrics-row">
-            <div class="case-met"><div class="case-met-num">40%</div><div class="case-met-lbl">More repeat sales</div></div>
-            <div class="case-met"><div class="case-met-num">&lt;1min</div><div class="case-met-lbl">Reply time</div></div>
-            <div class="case-met"><div class="case-met-num">3×</div><div class="case-met-lbl">Follow up rate</div></div>
+            <div class="case-met"><div class="case-met-num">2×</div><div class="case-met-lbl">Daily product output</div></div>
+            <div class="case-met"><div class="case-met-num">RM3.7k</div><div class="case-met-lbl">Staff time freed/mo</div></div>
+            <div class="case-met"><div class="case-met-num">Minutes</div><div class="case-met-lbl">Was 1.5 hrs each</div></div>
           </div>
-          <div class="case-quote-box">
-            <p>"I had no idea how much revenue I was leaving on the table by not following up. The AI does it automatically, like a sales assistant that never clocks off."</p>
-            <div class="case-author">
-              <div class="case-avatar">H</div>
-              <cite><span class="name">Hayden</span><span class="role">Founder & CEO, E-Commerce Brand</span></cite>
-            </div>
+          <div class="case-built">
+            <div class="lbl">What we built</div>
+            <p>A fully automated product research SOP: price lookup, cost sourcing, margin calculation and competitor checks, giving a clear Viable / Not Viable verdict in minutes.</p>
           </div>
         </div>
       </div>
 
       <div class="case-card reveal">
         <div class="case-header">
-          <span class="case-type">Professional Services</span>
+          <span class="case-type">Conglomerate · Finance Division</span>
           <span class="case-theme-badge">💰 Less Cost</span>
         </div>
         <div class="case-body">
-          <h3>Cut 15 hours a week of manual admin</h3>
-          <p class="before">Scheduling, invoicing, and reminders all done by hand. Staff spending most of their time on admin instead of serving clients. Money quietly walking out weekly.</p>
+          <h3>Month-end close lost days to manual consolidation</h3>
+          <p class="before">A large Malaysian conglomerate's finance team consolidated data from 4 separate systems every month-end. Reports took days, with no real-time view of cash or FX exposure.</p>
           <div class="case-metrics-row">
-            <div class="case-met"><div class="case-met-num">15h</div><div class="case-met-lbl">Saved per week</div></div>
-            <div class="case-met"><div class="case-met-num">60%</div><div class="case-met-lbl">Admin cost cut</div></div>
-            <div class="case-met"><div class="case-met-num">2wk</div><div class="case-met-lbl">Time to live</div></div>
+            <div class="case-met"><div class="case-met-num">60h</div><div class="case-met-lbl">Saved per month</div></div>
+            <div class="case-met"><div class="case-met-num">3 days</div><div class="case-met-lbl">Faster close</div></div>
+            <div class="case-met"><div class="case-met-num">Live</div><div class="case-met-lbl">Cash & FX view</div></div>
           </div>
-          <div class="case-quote-box">
-            <p>"We were paying staff to do what a system does in milliseconds. The ROI was obvious within the first month. I only wish we'd done it sooner."</p>
-            <div class="case-author">
-              <div class="case-avatar">L</div>
-              <cite><span class="name">Lee</span><span class="role">Founder & CEO, Services Firm</span></cite>
-            </div>
+          <div class="case-built">
+            <div class="lbl">What we built</div>
+            <p>Automated data extraction and transformation across all systems, feeding real-time Power BI dashboards for cash, FX and management reporting.</p>
           </div>
         </div>
       </div>
